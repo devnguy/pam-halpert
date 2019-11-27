@@ -11,4 +11,7 @@ Site is up on Netlify: [Here](https://pamhalpert.netlify.com "Pam Halpert Portfo
   * Make each page responsive
 ### Refactor
   * Refactor carousel component into slide, dotContainer, dot components. Each component should render based on carousel component's state
-
+### Theme
+  * Adjust typography
+  * Adjust colors
+  * Maybe just move on to the next project
