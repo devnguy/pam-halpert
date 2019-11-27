@@ -55,6 +55,14 @@ const PamNav = () => (
           Commission
         </Link>
       </li>
+      <li>
+        <Link 
+          to="/scroll" 
+          className="footer-link"
+        >
+          About
+        </Link>
+      </li>
     </ul>
 
   </div>
