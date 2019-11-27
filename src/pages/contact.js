@@ -22,17 +22,8 @@ const Divider = styled.hr`
   margin: 1em 0;
   margin-bottom: 2em;
 `
-/*
-black: #302419
-secondary button gray: #D3C2B2
-accent red: #CC141C
-background: #F9F5F1
-*/
 
 const FormFields = styled.div`
-  /* display: flex;
-  flex-wrap: wrap;
-  padding: 0; */
 `
 
 const FormFieldRow = styled.div`
@@ -45,22 +36,16 @@ const FormField = styled.div`
   max-width: 1000px;
   width: 48%;
 
-
   input {
     font-size: 1em;
     background-color: #F9F5F1;
     border: none;
     padding: .8em;
-  
     width: 100%;
     max-width: 500px;
     margin-right: 1em;
     margin: 0 1em 1em 0;
     box-sizing: border-box;
-    /* margin: 10px;
-    margin-right: -10px; */
-
-    
     &:focus {
       outline: none;
     }
@@ -92,8 +77,6 @@ const SubmitButtons = styled.div`
   display: flex;
   justify-content: center;
 `
-
-
 
 class ContactPage extends React.Component {
   state = {
@@ -131,9 +114,6 @@ class ContactPage extends React.Component {
       })
       const postData = await response.json()
       console.log(`POST SUCCESS: ${JSON.stringify(postData)}`)
-      
-      // alert(`Success: ${JSON.stringify(postData)}`)
-      
       alert(`Success sending data via POST to ${url}. Data has been logged in the console.`)
       
     } catch (error) {
@@ -155,13 +135,14 @@ class ContactPage extends React.Component {
 
           <PageTitle
             title="Let's work together!"
-            description="One simple email to"
-            emphasis="change the future of your business"
+            description="We'll create something for "
+            emphasis="your company, gallery, or grandma"
           />
 
           <ContactForm onSubmit={this.handleSubmit}>
-            <h3 className="hero-heading">Hello fill this out</h3>
+            <h3 className="hero-heading">I'd love to hear from you!</h3>
             <h5 className="">Just fill out the form below, and I'll be in touch to set up a call.</h5>
+            <p>Note: This site is loaded over HTTPS and sends a POST request to http://httpbin.org/post per assignment requirements (an insecure resource). If the browser blocks the request and you get an error, check the console for details. In order for POST request to work, you may have to load unsafe scripts.</p>
             <Divider />
 
             <FormFields>

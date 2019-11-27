@@ -6,7 +6,7 @@ const ContentContainer = styled.main`
   margin: auto;
   margin-bottom: 100px;
   @media (max-width: 686px) {
-    width: 90%;
+    width: 85%;
   }
 `
 export default ContentContainer
