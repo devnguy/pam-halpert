@@ -3,6 +3,11 @@ import styled from 'styled-components'
 
 import QuoteImage from '../components/quoteImage'
 
+import MichaelPortrait from '../../src/images/reviews/michael.png'
+import GilPortrait from '../../src/images/reviews/gil.png'
+import RoyPortrait from '../../src/images/reviews/roy.png'
+import DwightPortrait from '../../src/images/reviews/dwight.png'
+
 const CarouselContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,7 +57,9 @@ const StyledQuote = styled.div`
 
 const StyledAuthor = styled.div`
   h6 {
+    padding-left: 1em;
     margin: 1em 0;
+    display: inline-block;
   }
 `
 
@@ -65,25 +72,36 @@ const QuoteImageContainer = styled.div`
   margin-top: -1.5em;
 `
 
+const Portrait = styled.img`
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+`
+
 const slides = [
   { 
     quote: 'My God, these could be tracings!',
     author: 'Michael Scott',
+    portrait: MichaelPortrait,
     index: 0
   }, {
     quote: 'Real art takes courage. And honesty. That\'s why this is.. motel art.',
     author: 'Gil',
+    portrait: GilPortrait,
     index: 1
   }, {
     quote: 'Your art.. was the prettiest art of.. all art.',
     author: 'Roy Anderson',
+    portrait: RoyPortrait,
     index: 2
   }, {
     quote: 'There are shadows coming from two directions. What!? Are there two suns? Uhh, last I checked that\'s not an office building in the Andromeda galaxy. It\'s totally unrealistic!',
     author: 'Dwight Schrute',
+    portrait: DwightPortrait,
     index: 3
   }, {
     quote: 'I would never say this to her face but she\'s a wonderful person and a gifted artist.',
+    portrait: MichaelPortrait,
     author: 'Michael Scott',
     index: 4
   }
@@ -142,7 +160,8 @@ class Carousel extends React.Component {
 
         <Controller>
           <StyledAuthor>
-            <h6>- {this.state.currentSlide.author}</h6>
+            <Portrait src={this.state.currentSlide.portrait} />
+            <h6>{this.state.currentSlide.author}</h6>
           </StyledAuthor>
           <DotContainer>
             {
