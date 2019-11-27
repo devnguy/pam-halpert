@@ -71,6 +71,7 @@ const MessageField = styled.div`
   max-width: 1000px;
   width: 100%;
   textarea {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     background-color: #F9F5F1;
     border: none;
