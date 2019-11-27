@@ -2,23 +2,20 @@
 :root {
   --accent-color: #5cb7bf;
   --faded-accent: #d9dcda;
+  --background-lightgray: #edeae5;
 }
 
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  background-color: #edeae5;
-  /* padding: 0;
-  margin: 0; */
-  /* color: #13163e; */
-  /* line-height: 24px; */
+  background-color: var(--background-lightgray);
 }
 
 body {
   color: #000;
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
-  background-color: #edeae5;
+  background-color: var(--background-lightgray);
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -34,8 +31,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Heebo', sans-serif;
   font-weight: 700;
   line-height: 1.15;
-  /* font-weight: 400; */
-  /* letter-spacing: 1px; */
 }
 
 h1 {
@@ -55,8 +50,6 @@ li, p {
 
 .container {
   margin: auto;
-  /* max-width: 750px;
-  width: 75%; */
 }
 
 .accent-color {
@@ -71,18 +64,13 @@ ul {
 
 a:link, a:visited {
   color: #13163e;
-  /* text-decoration: none; */
 }
 
-/* Text animation on hover */
 
+/* Text animation on hover */
 .hover-underline {
   color: var(--accent-color);
   text-decoration: none;
-  /* letter-spacing: 0.1em; */
-  /* margin: 15px 20px; */
-  
-  /* display: inline-block; */
   padding-bottom: .1em;
   position: relative;
 }
@@ -124,13 +112,9 @@ a:link, a:visited {
   color: var(--faded-accent);
 }
 
-
-
-
 /* Hero cascading animation (hacky) */
 .hero-heading {
   margin: 0.2em 0;
-  /* display: inline; */
 }
 
 .cascade-animation .fade-in:nth-child(1) {
@@ -160,22 +144,6 @@ a:link, a:visited {
   }
 }
 
-/* Text animation on hover
-.active-link:after {    
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #cc141c;
-  width: 0;
-}
-.active-link:after { 
-  width: 100%; 
-  left: 0; 
-} */
 
 /* Button styles and hover animation */
 button {
